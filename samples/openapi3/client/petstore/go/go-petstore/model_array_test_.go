@@ -43,7 +43,7 @@ func NewArrayTestWithDefaults() *ArrayTest {
 
 // GetArrayOfString returns the ArrayOfString field value if set, zero value otherwise.
 func (o *ArrayTest) GetArrayOfString() []string {
-	if o == nil || o.ArrayOfString == nil {
+	if o == nil {
 		var ret []string
 		return ret
 	}
@@ -53,7 +53,7 @@ func (o *ArrayTest) GetArrayOfString() []string {
 // GetArrayOfStringOk returns a tuple with the ArrayOfString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ArrayTest) GetArrayOfStringOk() ([]string, bool) {
-	if o == nil || o.ArrayOfString == nil {
+	if o == nil {
 		return nil, false
 	}
 	return o.ArrayOfString, true
@@ -75,7 +75,7 @@ func (o *ArrayTest) SetArrayOfString(v []string) {
 
 // GetArrayArrayOfInteger returns the ArrayArrayOfInteger field value if set, zero value otherwise.
 func (o *ArrayTest) GetArrayArrayOfInteger() [][]int64 {
-	if o == nil || o.ArrayArrayOfInteger == nil {
+	if o == nil {
 		var ret [][]int64
 		return ret
 	}
@@ -85,7 +85,7 @@ func (o *ArrayTest) GetArrayArrayOfInteger() [][]int64 {
 // GetArrayArrayOfIntegerOk returns a tuple with the ArrayArrayOfInteger field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ArrayTest) GetArrayArrayOfIntegerOk() ([][]int64, bool) {
-	if o == nil || o.ArrayArrayOfInteger == nil {
+	if o == nil {
 		return nil, false
 	}
 	return o.ArrayArrayOfInteger, true
@@ -107,7 +107,7 @@ func (o *ArrayTest) SetArrayArrayOfInteger(v [][]int64) {
 
 // GetArrayArrayOfModel returns the ArrayArrayOfModel field value if set, zero value otherwise.
 func (o *ArrayTest) GetArrayArrayOfModel() [][]ReadOnlyFirst {
-	if o == nil || o.ArrayArrayOfModel == nil {
+	if o == nil {
 		var ret [][]ReadOnlyFirst
 		return ret
 	}
@@ -117,7 +117,7 @@ func (o *ArrayTest) GetArrayArrayOfModel() [][]ReadOnlyFirst {
 // GetArrayArrayOfModelOk returns a tuple with the ArrayArrayOfModel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ArrayTest) GetArrayArrayOfModelOk() ([][]ReadOnlyFirst, bool) {
-	if o == nil || o.ArrayArrayOfModel == nil {
+	if o == nil {
 		return nil, false
 	}
 	return o.ArrayArrayOfModel, true

@@ -38,7 +38,7 @@ func NewArrayOfArrayOfNumberOnlyWithDefaults() *ArrayOfArrayOfNumberOnly {
 
 // GetArrayArrayNumber returns the ArrayArrayNumber field value if set, zero value otherwise.
 func (o *ArrayOfArrayOfNumberOnly) GetArrayArrayNumber() [][]float32 {
-	if o == nil || o.ArrayArrayNumber == nil {
+	if o == nil {
 		var ret [][]float32
 		return ret
 	}
@@ -48,7 +48,7 @@ func (o *ArrayOfArrayOfNumberOnly) GetArrayArrayNumber() [][]float32 {
 // GetArrayArrayNumberOk returns a tuple with the ArrayArrayNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ArrayOfArrayOfNumberOnly) GetArrayArrayNumberOk() ([][]float32, bool) {
-	if o == nil || o.ArrayArrayNumber == nil {
+	if o == nil {
 		return nil, false
 	}
 	return o.ArrayArrayNumber, true

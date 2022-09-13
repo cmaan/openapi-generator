@@ -162,7 +162,7 @@ func (o *Pet) SetPhotoUrls(v []string) {
 
 // GetTags returns the Tags field value if set, zero value otherwise.
 func (o *Pet) GetTags() []Tag {
-	if o == nil || o.Tags == nil {
+	if o == nil {
 		var ret []Tag
 		return ret
 	}
@@ -172,7 +172,7 @@ func (o *Pet) GetTags() []Tag {
 // GetTagsOk returns a tuple with the Tags field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *Pet) GetTagsOk() ([]Tag, bool) {
-	if o == nil || o.Tags == nil {
+	if o == nil {
 		return nil, false
 	}
 	return o.Tags, true

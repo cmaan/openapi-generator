@@ -28,7 +28,7 @@ type NullableClass struct {
 	ArrayItemsNullable []*map[string]interface{} `json:"array_items_nullable,omitempty"`
 	ObjectNullableProp map[string]map[string]interface{} `json:"object_nullable_prop,omitempty"`
 	ObjectAndItemsNullableProp map[string]map[string]interface{} `json:"object_and_items_nullable_prop,omitempty"`
-	ObjectItemsNullable map[string]map[string]interface{} `json:"object_items_nullable,omitempty"`
+	ObjectItemsNullable *map[string]map[string]interface{} `json:"object_items_nullable,omitempty"`
 }
 
 // NewNullableClass instantiates a new NullableClass object
@@ -372,7 +372,7 @@ func (o *NullableClass) SetArrayAndItemsNullableProp(v []*map[string]interface{}
 
 // GetArrayItemsNullable returns the ArrayItemsNullable field value if set, zero value otherwise.
 func (o *NullableClass) GetArrayItemsNullable() []*map[string]interface{} {
-	if o == nil || o.ArrayItemsNullable == nil {
+	if o == nil {
 		var ret []*map[string]interface{}
 		return ret
 	}
@@ -382,7 +382,7 @@ func (o *NullableClass) GetArrayItemsNullable() []*map[string]interface{} {
 // GetArrayItemsNullableOk returns a tuple with the ArrayItemsNullable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *NullableClass) GetArrayItemsNullableOk() ([]*map[string]interface{}, bool) {
-	if o == nil || o.ArrayItemsNullable == nil {
+	if o == nil {
 		return nil, false
 	}
 	return o.ArrayItemsNullable, true
@@ -414,11 +414,11 @@ func (o *NullableClass) GetObjectNullableProp() map[string]map[string]interface{
 // GetObjectNullablePropOk returns a tuple with the ObjectNullableProp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *NullableClass) GetObjectNullablePropOk() (map[string]map[string]interface{}, bool) {
+func (o *NullableClass) GetObjectNullablePropOk() (*map[string]map[string]interface{}, bool) {
 	if o == nil || o.ObjectNullableProp == nil {
 		return nil, false
 	}
-	return o.ObjectNullableProp, true
+	return &o.ObjectNullableProp, true
 }
 
 // HasObjectNullableProp returns a boolean if a field has been set.
@@ -447,11 +447,11 @@ func (o *NullableClass) GetObjectAndItemsNullableProp() map[string]map[string]in
 // GetObjectAndItemsNullablePropOk returns a tuple with the ObjectAndItemsNullableProp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *NullableClass) GetObjectAndItemsNullablePropOk() (map[string]map[string]interface{}, bool) {
+func (o *NullableClass) GetObjectAndItemsNullablePropOk() (*map[string]map[string]interface{}, bool) {
 	if o == nil || o.ObjectAndItemsNullableProp == nil {
 		return nil, false
 	}
-	return o.ObjectAndItemsNullableProp, true
+	return &o.ObjectAndItemsNullableProp, true
 }
 
 // HasObjectAndItemsNullableProp returns a boolean if a field has been set.
@@ -474,12 +474,12 @@ func (o *NullableClass) GetObjectItemsNullable() map[string]map[string]interface
 		var ret map[string]map[string]interface{}
 		return ret
 	}
-	return o.ObjectItemsNullable
+	return *o.ObjectItemsNullable
 }
 
 // GetObjectItemsNullableOk returns a tuple with the ObjectItemsNullable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *NullableClass) GetObjectItemsNullableOk() (map[string]map[string]interface{}, bool) {
+func (o *NullableClass) GetObjectItemsNullableOk() (*map[string]map[string]interface{}, bool) {
 	if o == nil || o.ObjectItemsNullable == nil {
 		return nil, false
 	}
@@ -497,7 +497,7 @@ func (o *NullableClass) HasObjectItemsNullable() bool {
 
 // SetObjectItemsNullable gets a reference to the given map[string]map[string]interface{} and assigns it to the ObjectItemsNullable field.
 func (o *NullableClass) SetObjectItemsNullable(v map[string]map[string]interface{}) {
-	o.ObjectItemsNullable = v
+	o.ObjectItemsNullable = &v
 }
 
 func (o NullableClass) MarshalJSON() ([]byte, error) {

@@ -74,7 +74,7 @@ func (o *EnumArrays) SetJustSymbol(v string) {
 
 // GetArrayEnum returns the ArrayEnum field value if set, zero value otherwise.
 func (o *EnumArrays) GetArrayEnum() []string {
-	if o == nil || o.ArrayEnum == nil {
+	if o == nil {
 		var ret []string
 		return ret
 	}
@@ -84,7 +84,7 @@ func (o *EnumArrays) GetArrayEnum() []string {
 // GetArrayEnumOk returns a tuple with the ArrayEnum field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EnumArrays) GetArrayEnumOk() ([]string, bool) {
-	if o == nil || o.ArrayEnum == nil {
+	if o == nil {
 		return nil, false
 	}
 	return o.ArrayEnum, true
